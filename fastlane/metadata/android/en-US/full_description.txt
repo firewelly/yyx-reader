@@ -1,0 +1,14 @@
+YYX Reader is a fully offline local novel reader for Android.
+
+• Scan and import local TXT / EPUB books (encoding auto-detection, chapter parsing)
+• Paginated reader: day / night / eye-care themes, adjustable font size and line spacing
+• Text-to-speech listening: sentence-level control, speed 0.75x–3x, sleep timer, screen-off playback
+• Reading and listening share ONE progress (chapter index + character offset)
+• Tags, bookmarks, shelf filters, batch actions
+• Streaming JSON backup / restore (local file, up to 64 MB)
+
+Privacy — no network permission at all: no ads, no analytics, no accounts, zero data collection.
+
+The app is TTS-engine agnostic: it works with any offline system TTS engine installed on your device.
+An optional built-in offline TTS engine (sherpa-onnx; voice model imported by the user) is available
+as a fallback for devices without a usable system engine.

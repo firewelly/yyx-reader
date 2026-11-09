@@ -1,0 +1,49 @@
+Categories:
+  - Reading
+License: BSD-3-Clause
+AuthorName: Menglong Yuan
+AuthorEmail: m.f.yuan@gmail.com
+WebSite: https://github.com/firewelly/yyx-reader
+SourceCode: https://github.com/firewelly/yyx-reader
+IssueTracker: https://github.com/firewelly/yyx-reader/issues
+Changelog: https://github.com/firewelly/yyx-reader/releases
+
+AutoName: YYX Reader
+Summary: Offline ad-free novel reader (TXT/EPUB, TTS listening, synced progress)
+Description: |-
+  YYX Reader is a fully offline local novel reader for Android.
+
+  Features:
+  * Scan and import local TXT / EPUB books (encoding auto-detection, chapter parsing)
+  * Paginated reader with day / night / eye-care themes, adjustable font size and line spacing
+  * Text-to-speech listening with sentence-level control, speed 0.75x-3x, sleep timer
+  * Reading and listening share one progress (chapter index + character offset)
+  * Tags, bookmarks, per-book shelf filters
+  * Streaming JSON backup / restore (local file, up to 64 MB)
+  * Optional built-in offline TTS engine (sherpa-onnx; voice model imported by the user)
+
+  Privacy:
+  * No network permission at all (the offline variant declares no INTERNET / ACCESS_NETWORK_STATE)
+  * No ads, no analytics, no accounts, zero data collection
+  * All data stays on the device
+
+  Note: The built-in offline TTS engine (sherpa-onnx) is an optional fallback; the recommended
+  setup is using an offline system TTS engine already installed on the device.
+
+RepoType: git
+Repo: https://github.com/firewelly/yyx-reader.git
+
+Builds:
+  - versionName: 0.1.0
+    versionCode: 1
+    commit: v0.1.0
+    subdir: app
+    gradle:
+      - offline
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+VercodeOperation:
+  - 10 * %c + 6
+CurrentVersion: 0.1.0
+CurrentVersionCode: 1
