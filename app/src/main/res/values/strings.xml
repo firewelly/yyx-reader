@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App name (default locale = English; Chinese in values-zh) -->
+    <string name="app_name">YYX Reader</string>
+
+    <!-- Common -->
+    <string name="common_back">Back</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_close">Close</string>
+    <string name="common_import">Import</string>
+    <string name="common_remove">Remove</string>
+    <string name="common_delete">Delete</string>
+    <string name="common_save">Save</string>
+    <string name="common_clear">Clear</string>
+    <string name="common_view">View</string>
+    <string name="common_export">Export</string>
+    <string name="common_search">Search</string>
+    <string name="common_sort">Sort</string>
+    <string name="common_settings">Settings</string>
+
+    <string name="common_author_unknown">Unknown</string>
+
+    <!-- Word counts -->
+    <string name="word_count_chars">%1$d chars</string>
+    <string name="word_count_k">%1$dk chars</string>
+    <string name="word_count_m">%1$.1fM chars</string>
+    <string name="word_count_wan">%1$d0k chars</string>
+    <string name="word_count_yi">%1$.1f hundred-million chars</string>
+
+    <!-- Bookshelf -->
+    <string name="library_title">Bookshelf</string>
+    <string name="library_search_hint">Search title / author</string>
+    <string name="library_close_search">Close search</string>
+    <string name="library_scan_import">Scan &amp; import</string>
+    <string name="library_selected_count">%1$d selected</string>
+    <string name="library_deselect">Deselect</string>
+    <string name="library_tags">Tags</string>
+    <string name="library_filter_all">All</string>
+    <string name="library_delete_tag_title">Delete tag</string>
+    <string name="library_delete_tag_message">Delete tag "%1$s"? Books under this tag will not be deleted.</string>
+    <string name="library_delete_books_title">Delete %1$d books</string>
+    <string name="library_delete_books_message">Remove from bookshelf only, or also delete source files?</string>
+    <string name="library_delete_sources">Also delete source files</string>
+    <string name="library_remove_only">Remove only</string>
+    <string name="library_empty">Bookshelf is empty</string>
+    <string name="library_empty_hint">Add a scan folder to find TXT / EPUB novels on your device</string>
+    <string name="library_choose_folder">Choose novel folder</string>
+    <string name="library_open_scan_panel">Open scan panel</string>
+    <string name="library_no_match">No matching books</string>
+    <string name="library_tag_panel_title">Batch tag</string>
+    <string name="library_tag_panel_hint">%1$d books selected; check to add, uncheck to remove</string>
+    <string name="library_no_tags">No tags yet, create one below</string>
+    <string name="library_new_tag">New tag</string>
+    <string name="library_create">Create</string>
+    <string name="library_apply_to">Apply to %1$d</string>
+    <string name="library_scan_section">Scan &amp; import</string>
+    <string name="library_scan_hint">Recursively scan selected folders for TXT / EPUB files, auto-detect encoding and chapters</string>
+    <string name="library_last_scan">Last scan: %1$s</string>
+    <string name="library_remove_folder">Remove folder</string>
+    <string name="library_add_folder">Add scan folder</string>
+    <string name="library_start_scan">Start scan</string>
+    <string name="library_folder">Folder</string>
+    <string name="library_folder_added">This folder is already in the scan list</string>
+    <string name="library_collecting">Collecting files…</string>
+    <string name="library_scan_cancelled">Scan cancelled</string>
+    <string name="library_scan_failed">Scan failed: %1$s</string>
+    <string name="library_deleted_count">%1$d deleted</string>
+    <string name="library_tag_empty_or_duplicate">Tag name is empty or already exists</string>
+    <string name="library_tag_deleted">Deleted tag "%1$s"</string>
+    <string name="library_tag_updated">Tags updated for %1$d books</string>
+    <string name="library_read_percent">%1$d%% read</string>
+    <string name="library_sort_recent">Recently read</string>
+    <string name="library_sort_added">Date added</string>
+    <string name="library_sort_title">Title</string>
+    <string name="library_sort_author">Author</string>
+
+    <!-- Book details -->
+    <string name="detail_title">Details</string>
+    <string name="detail_edit">Edit</string>
+    <string name="detail_encoding">Encoding</string>
+    <string name="detail_reparse">Reparse</string>
+    <string name="detail_start_reading">Start reading</string>
+    <string name="detail_continue_reading">Continue reading</string>
+    <string name="detail_toc_count">Contents (%1$d chapters)</string>
+    <string name="detail_delete_book">Delete "%1$s"</string>
+    <string name="detail_delete_message">Remove from bookshelf only, or also delete source files?</string>
+    <string name="detail_chapter_count">%1$d chapters</string>
+    <string name="detail_char_count">%1$d chars</string>
+    <string name="detail_edit_info">Edit book info</string>
+    <string name="detail_field_title">Title</string>
+    <string name="detail_field_author">Author</string>
+    <string name="detail_field_description">Description</string>
+    <string name="detail_encoding_dialog">TXT encoding (set manually if garbled)</string>
+    <string name="detail_apply_reparse">Apply &amp; reparse</string>
+    <string name="detail_saved">Saved</string>
+    <string name="detail_source_unavailable">Source file is inaccessible; it may have been moved or deleted</string>
+    <string name="detail_reparse_done">Reparse completed</string>
+    <string name="detail_reparse_unchanged">File unchanged</string>
+    <string name="detail_reparse_failed">Reparse failed: %1$s</string>
+
+    <!-- Reader -->
+    <string name="reader_empty_chapter">This chapter is empty</string>
+    <string name="reader_toc">Contents</string>
+    <string name="reader_bookmarks">Bookmarks</string>
+    <string name="reader_listen">Listen</string>
+    <string name="reader_toc_count">Contents (%1$d)</string>
+    <string name="reader_bookmarks_count">Bookmarks (%1$d)</string>
+    <string name="reader_no_bookmarks">Tap the bookmark icon in the reader menu to bookmark the current page</string>
+    <string name="reader_chapter_index">Chapter %1$d</string>
+    <string name="reader_delete_bookmark">Delete bookmark</string>
+    <string name="reader_exit_title">Exit reading?</string>
+    <string name="reader_exit_message">Progress has been saved automatically</string>
+    <string name="reader_exit_button">Exit</string>
+    <string name="reader_continue_button">Continue reading</string>
+    <string name="reader_prev_sentence">Previous</string>
+    <string name="reader_pause">Pause</string>
+    <string name="reader_resume">Resume</string>
+    <string name="reader_next_sentence">Next</string>
+    <string name="reader_sleep_timer">Sleep timer</string>
+    <string name="reader_cancel_timer">Cancel timer</string>
+    <string name="reader_stop_in_minutes">Stop in %1$d min</string>
+    <string name="reader_stop_at_chapter_end">Stop at chapter end</string>
+    <string name="reader_stop_listening">Stop listening</string>
+    <string name="reader_timer_active">Timer set</string>
+    <string name="reader_output_device">Output: %1$s</string>
+    <string name="reader_output_to">Output to</string>
+    <string name="reader_follow_system">Follow system</string>
+    <string name="reader_more_devices_hidden">%1$d more devices hidden, following system</string>
+    <string name="reader_selected_offline">Selected device is offline, following system</string>
+    <string name="reader_local_route_hint">Built-in engine exact routing: falls back to system when the device is unplugged</string>
+    <string name="reader_force_speaker">Force speaker</string>
+    <string name="reader_no_speaker">Speaker not detected</string>
+    <string name="reader_system_route_hint">Wired/Bluetooth follows system; force speaker may be ignored on some ROMs (switch to the built-in engine for exact routing)</string>
+    <string name="reader_prev_chapter">Prev chapter</string>
+    <string name="reader_next_chapter">Next chapter</string>
+    <string name="reader_font_size">Size %1$d</string>
+    <string name="reader_line_spacing">Spacing %1$d</string>
+    <string name="reader_page_indicator">%1$d/%2$d · %3$d%%</string>
+    <string name="reader_chapter_load_failed_title">Chapter load failed</string>
+
+    <!-- Themes -->
+    <string name="theme_day">Day</string>
+    <string name="theme_night">Night</string>
+    <string name="theme_eye_care">Eye care</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_listen_section">Listening</string>
+    <string name="settings_tts_engine">TTS engine</string>
+    <string name="settings_engine_local_selected">Built-in offline engine (tap to change)</string>
+    <string name="settings_no_engine">No engine found. Install eSpeak NG / RHVoice, or import a built-in engine voice model</string>
+    <string name="settings_engine_selected">%1$s (tap to change)</string>
+    <string name="settings_engine_auto_with">Auto (%1$s)</string>
+    <string name="settings_engine_uninstalled">Selected engine uninstalled; will fall back to auto</string>
+    <string name="settings_local_model_section">Offline voice model</string>
+    <string name="settings_local_model_title">Built-in engine voice model (fallback)</string>
+    <string name="settings_local_model_imported">Imported: %1$s · %2$s</string>
+    <string name="settings_local_model_hint">Not imported. The built-in engine is a fallback: synthesis is slow and sentence gaps may occur; prefer the system offline TTS. To import, download a sherpa-onnx Chinese model (recommended vits-melo-tts-zh_en), extract it, tap Import and select the folder</string>
+    <string name="settings_model_importing">Importing… copied %1$s</string>
+    <string name="settings_storage_section">Storage</string>
+    <string name="settings_db">Library database</string>
+    <string name="settings_epub_cache">EPUB text cache</string>
+    <string name="settings_tts_cache">TTS audio cache</string>
+    <string name="settings_tts_cache_hint">Sentence cache (created by the V1.2 synthesis pipeline)</string>
+    <string name="settings_backup_section">Backup &amp; restore</string>
+    <string name="settings_backup_busy">Processing backup file…</string>
+    <string name="settings_backup_export">Export backup</string>
+    <string name="settings_backup_export_hint">Library index, progress, bookmarks, tags and settings → one JSON file (local only)</string>
+    <string name="settings_backup_import">Import backup</string>
+    <string name="settings_backup_import_hint">Restore from a backup file: erases all current data first</string>
+    <string name="settings_diagnostics_section">Diagnostics</string>
+    <string name="settings_crash_logs">Crash logs</string>
+    <string name="settings_crash_none">No local crash records (stored on device only, never uploaded)</string>
+    <string name="settings_crash_count">%1$d files (stored on device only, never uploaded)</string>
+    <string name="settings_about_section">About</string>
+    <string name="settings_principles">Product principles</string>
+    <string name="settings_principles_text">No ads · Fully offline (no Google services or online APIs)\nLocal-first · Zero data collection · No account\nNo online bookstores or crawlers</string>
+    <string name="settings_data_note">Data notes</string>
+    <string name="settings_data_note_text">Library index, progress and settings are stored on your device.\nFolders are authorized via the system file picker; the app requests no storage permission (Android 11+).</string>
+    <string name="settings_engine_dialog_title">Choose TTS engine</string>
+    <string name="settings_engine_auto">Auto (system default)</string>
+    <string name="settings_local_engine_option">Built-in offline engine (fallback · slow)</string>
+    <string name="settings_local_engine_imported_hint">Imported: %1$s; performance is limited and sentence gaps may occur — prefer the system offline TTS</string>
+    <string name="settings_local_engine_missing_hint">No voice model imported; import one under "Offline voice model" first</string>
+    <string name="settings_import_confirm_title">Overwrite restore</string>
+    <string name="settings_import_confirm_text">This will erase all current books, chapters, progress, bookmarks, tags and scan folders, then restore from the backup file. Reading / listening settings will also be overwritten.\n\nThis cannot be undone. Continue?</string>
+    <string name="settings_import_confirm_button">Erase &amp; restore</string>
+    <string name="settings_engine_switched">TTS engine switched; takes effect on the next listening session</string>
+    <string name="settings_export_success">Export succeeded: %1$d records · %2$s</string>
+    <string name="settings_export_skipped"> (missing tables skipped: %1$s)</string>
+    <string name="settings_restore_stop_listen">Stop listening before restoring a backup</string>
+    <string name="settings_restore_success">Restore complete: %1$d records</string>
+    <string name="settings_restore_settings">, settings restored</string>
+    <string name="settings_restore_settings_engine">, settings restored (TTS engine switched)</string>
+    <string name="settings_cleanup_done">Cleared %1$s</string>
+    <string name="settings_model_imported">Offline voice model imported: %1$s (%2$s)</string>
+    <string name="settings_model_removed">Offline voice model removed</string>
+    <string name="settings_model_import_failed">Import failed: %1$s</string>
+    <string name="settings_model_import_verify_failed">Import failed: verification failed after copy; previous model kept</string>
+    <string name="settings_model_import_dir_unreadable">Cannot read the selected folder; try again</string>
+
+    <!-- Share import -->
+    <string name="share_import_unreadable">Cannot read shared content</string>
+    <string name="share_import_success">Imported: "%1$s"</string>
+    <string name="share_import_updated">Chapter index updated</string>
+    <string name="share_import_unchanged">File unchanged</string>
+    <string name="share_import_failed">Import failed: %1$s</string>
+
+    <!-- TTS service / notification -->
+    <string name="tts_notification_channel">Listening playback</string>
+    <string name="tts_notification_text">%1$s · %2$d/%3$d sentences</string>
+    <string name="tts_action_play_pause">Play/Pause</string>
+    <string name="tts_action_next">Next sentence</string>
+    <string name="tts_action_prev">Previous sentence</string>
+    <string name="tts_error_book_missing">Book does not exist or was deleted</string>
+    <string name="tts_error_no_chapters">This book has no chapter index</string>
+    <string name="tts_error_local_model">Built-in offline engine unavailable: voice model not imported or invalid. Go to Settings → Offline voice model and import one.</string>
+    <string name="tts_error_no_engine">No TTS engine found. Install an open-source offline engine (e.g. eSpeak NG / RHVoice) or enable TTS in system settings.</string>
+    <string name="tts_error_empty_chapter">This chapter has no readable content</string>
+    <string name="tts_error_utterance">TTS error; sentence skipped</string>
+
+    <!-- Audio outputs -->
+    <string name="audio_group_speaker">Speaker</string>
+    <string name="audio_group_wired">Wired</string>
+    <string name="audio_group_bluetooth">Bluetooth</string>
+    <string name="audio_group_usb">USB</string>
+    <string name="audio_group_other">Other</string>
+    <string name="audio_speaker">Speaker</string>
+    <string name="audio_speaker_safe">Speaker (safe volume)</string>
+    <string name="audio_earpiece">Earpiece</string>
+    <string name="audio_wired_headset">Wired headset</string>
+    <string name="audio_wired_headphones">Wired headphones</string>
+    <string name="audio_line_analog">Analog audio cable</string>
+    <string name="audio_line_digital">Digital audio cable</string>
+    <string name="audio_aux_line">AUX cable</string>
+    <string name="audio_bt_sco">Bluetooth call</string>
+    <string name="audio_bt_a2dp">Bluetooth audio</string>
+    <string name="audio_ble_headset">Bluetooth LE headset</string>
+    <string name="audio_ble_speaker">Bluetooth LE speaker</string>
+    <string name="audio_ble_broadcast">Bluetooth LE broadcast</string>
+    <string name="audio_hearing_aid">Hearing aid</string>
+    <string name="audio_usb_device">USB audio</string>
+    <string name="audio_usb_headset">USB headset</string>
+    <string name="audio_usb_accessory">USB audio accessory</string>
+    <string name="audio_hdmi">HDMI audio</string>
+    <string name="audio_dock">Dock audio</string>
+    <string name="audio_fm">FM radio</string>
+    <string name="audio_fm_tuner">FM tuner</string>
+    <string name="audio_tv_tuner">TV tuner</string>
+    <string name="audio_telephony">Call audio</string>
+    <string name="audio_ip">Network audio</string>
+    <string name="audio_bus">Bus audio</string>
+    <string name="audio_builtin_mic">Built-in mic</string>
+    <string name="audio_unknown">Other audio device</string>
+    <string name="audio_none_detected">No output devices detected</string>
+    <string name="audio_device_with_count">%1$s×%2$d</string>
+
+    <!-- Local model locator -->
+    <string name="model_error_empty_dir">The selected folder is empty</string>
+    <string name="model_error_missing_model">Missing model file model.onnx (or quantized model.int8.onnx). Files found: %1$s</string>
+    <string name="model_error_missing_tokens">Missing tokens.txt (vocabulary file). Files found: %1$s</string>
+    <string name="model_error_matcha_data">Matcha model is missing lexicon.txt (Chinese) or espeak-ng-data/ (English phoneme data)</string>
+    <string name="model_error_missing_dict">Chinese VITS model is missing the dict/ folder (jieba dictionary, required for polyphones). Make sure you downloaded a complete model package (e.g. vits-melo-tts-zh_en) and imported it with the dict folder</string>
+    <string name="model_error_unrecognized">Unrecognized model folder (no lexicon.txt / vocoder.onnx / espeak-ng-data). The sherpa-onnx vits-melo-tts-zh_en Chinese model is recommended. Files found: %1$s</string>
+    <string name="model_error_more_files">, %1$d files total</string>
+    <string name="model_label_vits_zh_int8">VITS Chinese model (int8 quantized · zh-en)</string>
+    <string name="model_label_vits_zh">VITS Chinese model (zh-en)</string>
+    <string name="model_label_matcha_zh">Matcha Chinese model</string>
+    <string name="model_label_matcha_en">Matcha model (English)</string>
+    <string name="model_label_kokoro">Kokoro multilingual model</string>
+
+    <!-- Backup -->
+    <string name="backup_error_read_file">Cannot read the selected file</string>
+    <string name="backup_error_not_json">The backup file is not valid JSON</string>
+    <string name="backup_error_table_not_array">Backup table %1$s is not an array</string>
+    <string name="backup_error_row_not_object">Backup row is not a JSON object</string>
+    <string name="backup_error_too_large">Backup file is too large (over %1$d MB); this version cannot handle it</string>
+    <string name="backup_error_missing_core">Backup is missing core tables (%1$s) and may be corrupted. Import rejected; local data unchanged</string>
+    <string name="backup_error_table_order">Backup table order is invalid (book_tags must follow books/tags). Use a backup file exported by this app</string>
+    <string name="backup_error_write_file">Cannot write the selected file</string>
+    <string name="backup_error_export_too_large">Library data is too large (over %1$d MB); this version cannot produce a restorable backup</string>
+    <string name="backup_error_export_failed">Export failed: %1$s</string>
+    <string name="backup_error_schema_too_new">Backup comes from a newer app version (schema=%1$d); upgrade the app before importing</string>
+    <string name="backup_error_schema_missing">Invalid backup format: missing or unrecognized schema version</string>
+    <string name="backup_error_no_data">The backup file contains no restorable data</string>
+    <string name="backup_error_import_failed">Import failed: %1$s</string>
+    <string name="backup_error_binary_column">Column %2$s of table %1$s is a binary type; this version cannot back it up</string>
+    <string name="backup_warn_table_kept">Backup has no data for %1$s; local data for %1$s kept</string>
+    <string name="backup_warn_booktags_skipped">%1$d tag links referenced nonexistent books/tags and were skipped</string>
+    <string name="backup_warn_duplicate_rows">%1$d duplicate primary keys in backup; later rows overwrote earlier ones</string>
+    <string name="backup_warn_tables_skipped">Skipped tables not present locally: %1$s</string>
+    <string name="backup_warn_unknown_tables">Ignored %1$d unknown tables</string>
+    <string name="backup_warn_unknown_columns">Skipped %1$d unknown columns</string>
+    <string name="backup_warn_no_settings">Backup contains no settings; current settings kept</string>
+    <string name="backup_warn_reader_settings_failed">Failed to restore reading settings: %1$s</string>
+    <string name="backup_warn_listen_settings_failed">Failed to restore listening settings: %1$s</string>
+    <string name="backup_warn_dangling_chapters">%1$d chapters reference nonexistent books</string>
+    <string name="backup_warn_dangling_progress">%1$d progress records reference nonexistent books</string>
+    <string name="backup_warn_dangling_bookmarks">%1$d bookmarks reference nonexistent books</string>
+    <string name="backup_warn_dangling_booktags">%1$d book-tag links reference nonexistent books or tags</string>
+    <string name="backup_warn_sources_unreadable">%1$d book source files are inaccessible; re-authorize scan folders or re-import</string>
+    <string name="backup_warn_folders_unreadable">%1$d scan folders are inaccessible; re-authorize them</string>
+    <string name="backup_summary_rows">%1$d records in total</string>
+    <string name="backup_notification_unreadable">Cannot open %1$s</string>
+    <string name="backup_copy_failed">Failed to copy %1$s: %2$s</string>
+
+    <!-- Scan / import summary -->
+    <string name="scan_summary_added">Added %1$d · updated %2$d · unchanged %3$d · failed %4$d</string>
+
+    <!-- Chapter load placeholder -->
+    <string name="chapter_load_failed_title">Chapter load failed</string>
+    <string name="chapter_load_failed_reason">Reason: %1$s</string>
+    <string name="chapter_load_failed_retry">Try: book details → Reparse; or re-add the scan folder on the bookshelf and scan again.</string>
+    <string name="chapter_fail_no_permission">Cannot access the source file (file authorization expired)</string>
+    <string name="chapter_fail_not_found">Source file does not exist or has been moved</string>
+    <string name="chapter_fail_read">Failed to read the source file</string>
+    <string name="chapter_fail_parse">Failed to parse the chapter</string>
+    <string name="importer_no_filename">No file name</string>
+    <string name="importer_unsupported">%1$s: unsupported format</string>
+    <string name="importer_empty_file">%1$s: empty file</string>
+    <string name="importer_no_text">%1$s: no valid text</string>
+    <string name="importer_untitled">Untitled</string>
+    <string name="importer_unopenable">%1$s: cannot open</string>
+    <string name="importer_epub_parse">%1$s: EPUB parse failed (missing OPF/spine)</string>
+    <string name="importer_no_chapters">%1$s: no valid chapter text</string>
+    <string name="chapter_default_title">Chapter %1$d</string>
+    <string name="library_scan_walk_failed">Failed to walk folder "%1$s": %2$s</string>
+    <string name="txt_open_failed">Cannot open file: %1$s</string>
+    <string name="txt_too_large">File exceeds the %1$d MB limit</string>
+    <string name="epub_entry_too_large">ZIP entry exceeds %1$d MB</string>
+</resources>

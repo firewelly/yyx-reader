@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 应用名 -->
+    <string name="app_name">YYX阅读器</string>
+
+    <!-- 通用 -->
+    <string name="common_back">返回</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_close">关闭</string>
+    <string name="common_import">导入</string>
+    <string name="common_remove">移除</string>
+    <string name="common_delete">删除</string>
+    <string name="common_save">保存</string>
+    <string name="common_clear">清理</string>
+    <string name="common_view">查看</string>
+    <string name="common_export">导出</string>
+    <string name="common_search">搜索</string>
+    <string name="common_sort">排序</string>
+    <string name="common_settings">设置</string>
+
+    <string name="common_author_unknown">佚名</string>
+
+    <!-- 字数 -->
+    <string name="word_count_chars">%1$d字</string>
+    <string name="word_count_k">%1$d字</string>
+    <string name="word_count_m">%1$.1fM字</string>
+    <string name="word_count_wan">%1$d万字</string>
+    <string name="word_count_yi">%1$.1f亿字</string>
+
+    <!-- 书架 -->
+    <string name="library_title">书架</string>
+    <string name="library_search_hint">搜索书名 / 作者</string>
+    <string name="library_close_search">关闭搜索</string>
+    <string name="library_scan_import">扫描导入</string>
+    <string name="library_selected_count">已选择 %1$d</string>
+    <string name="library_deselect">取消选择</string>
+    <string name="library_tags">标签</string>
+    <string name="library_filter_all">全部</string>
+    <string name="library_delete_tag_title">删除标签</string>
+    <string name="library_delete_tag_message">确定删除标签「%1$s」？标签下的书籍不会被删除。</string>
+    <string name="library_delete_books_title">删除 %1$d 本书</string>
+    <string name="library_delete_books_message">仅从书架移除，还是同时删除源文件？</string>
+    <string name="library_delete_sources">同时删除源文件</string>
+    <string name="library_remove_only">仅移除</string>
+    <string name="library_empty">书架空空如也</string>
+    <string name="library_empty_hint">添加扫描文件夹，自动找出手机里的 TXT / EPUB 小说</string>
+    <string name="library_choose_folder">选择小说文件夹</string>
+    <string name="library_open_scan_panel">打开扫描面板</string>
+    <string name="library_no_match">没有符合条件的书籍</string>
+    <string name="library_tag_panel_title">批量打标</string>
+    <string name="library_tag_panel_hint">已选 %1$d 本；勾选即添加、取消勾选即移除</string>
+    <string name="library_no_tags">还没有标签，先在下面新建一个</string>
+    <string name="library_new_tag">新建标签</string>
+    <string name="library_create">新建</string>
+    <string name="library_apply_to">应用到 %1$d 本</string>
+    <string name="library_scan_section">扫描导入</string>
+    <string name="library_scan_hint">递归扫描所选文件夹中的 TXT / EPUB 文件，自动识别编码与章节</string>
+    <string name="library_last_scan">上次扫描: %1$s</string>
+    <string name="library_remove_folder">移除文件夹</string>
+    <string name="library_add_folder">添加扫描文件夹</string>
+    <string name="library_start_scan">开始扫描</string>
+    <string name="library_folder">文件夹</string>
+    <string name="library_folder_added">该文件夹已在扫描列表中</string>
+    <string name="library_collecting">正在收集文件…</string>
+    <string name="library_scan_cancelled">扫描已取消</string>
+    <string name="library_scan_failed">扫描失败: %1$s</string>
+    <string name="library_deleted_count">已删除 %1$d 本</string>
+    <string name="library_tag_empty_or_duplicate">标签名为空或已存在</string>
+    <string name="library_tag_deleted">已删除标签「%1$s」</string>
+    <string name="library_tag_updated">已更新 %1$d 本的标签</string>
+    <string name="library_read_percent">已读 %1$d%%</string>
+    <string name="library_sort_recent">最近阅读</string>
+    <string name="library_sort_added">添加时间</string>
+    <string name="library_sort_title">书名</string>
+    <string name="library_sort_author">作者</string>
+
+    <!-- 书籍详情 -->
+    <string name="detail_title">详情</string>
+    <string name="detail_edit">编辑</string>
+    <string name="detail_encoding">编码</string>
+    <string name="detail_reparse">重新解析</string>
+    <string name="detail_start_reading">开始阅读</string>
+    <string name="detail_continue_reading">继续阅读</string>
+    <string name="detail_toc_count">目录（%1$d 章）</string>
+    <string name="detail_delete_book">删除《%1$s》</string>
+    <string name="detail_delete_message">仅从书架移除，还是同时删除源文件？</string>
+    <string name="detail_chapter_count">%1$d 章</string>
+    <string name="detail_char_count">%1$d 字</string>
+    <string name="detail_edit_info">编辑书籍信息</string>
+    <string name="detail_field_title">书名</string>
+    <string name="detail_field_author">作者</string>
+    <string name="detail_field_description">简介</string>
+    <string name="detail_encoding_dialog">TXT 编码（乱码时手动指定）</string>
+    <string name="detail_apply_reparse">应用并重新解析</string>
+    <string name="detail_saved">已保存</string>
+    <string name="detail_source_unavailable">源文件不可访问，可能已被移动或删除</string>
+    <string name="detail_reparse_done">重新解析完成</string>
+    <string name="detail_reparse_unchanged">文件未变化</string>
+    <string name="detail_reparse_failed">解析失败: %1$s</string>
+
+    <!-- 阅读器 -->
+    <string name="reader_empty_chapter">本章无内容</string>
+    <string name="reader_toc">目录</string>
+    <string name="reader_bookmarks">书签</string>
+    <string name="reader_listen">听书</string>
+    <string name="reader_toc_count">目录（%1$d）</string>
+    <string name="reader_bookmarks_count">书签（%1$d）</string>
+    <string name="reader_no_bookmarks">在阅读器菜单点书签图标，为当前页添加书签</string>
+    <string name="reader_chapter_index">第 %1$d 章</string>
+    <string name="reader_delete_bookmark">删除书签</string>
+    <string name="reader_exit_title">退出阅读？</string>
+    <string name="reader_exit_message">进度已自动保存</string>
+    <string name="reader_exit_button">退出</string>
+    <string name="reader_continue_button">继续阅读</string>
+    <string name="reader_prev_sentence">上一句</string>
+    <string name="reader_pause">暂停</string>
+    <string name="reader_resume">继续</string>
+    <string name="reader_next_sentence">下一句</string>
+    <string name="reader_sleep_timer">定时停止</string>
+    <string name="reader_cancel_timer">关闭定时</string>
+    <string name="reader_stop_in_minutes">%1$d 分钟后停止</string>
+    <string name="reader_stop_at_chapter_end">本章结束即停</string>
+    <string name="reader_stop_listening">停止听书</string>
+    <string name="reader_timer_active">定时停止已设</string>
+    <string name="reader_output_device">输出设备：%1$s</string>
+    <string name="reader_output_to">输出到</string>
+    <string name="reader_follow_system">跟随系统</string>
+    <string name="reader_more_devices_hidden">其余 %1$d 个设备未显示，暂跟随系统</string>
+    <string name="reader_selected_offline">已选输出设备不在线，当前跟随系统</string>
+    <string name="reader_local_route_hint">本地引擎精确路由：设备拔出自动回退跟随系统</string>
+    <string name="reader_force_speaker">强制外放</string>
+    <string name="reader_no_speaker">未检测到扬声器</string>
+    <string name="reader_system_route_hint">有线/蓝牙跟随系统；强制外放部分机型可能被忽略（切换到内置离线引擎可精确选择输出设备）</string>
+    <string name="reader_prev_chapter">上一章</string>
+    <string name="reader_next_chapter">下一章</string>
+    <string name="reader_font_size">字号 %1$d</string>
+    <string name="reader_line_spacing">行距 %1$d</string>
+    <string name="reader_page_indicator">%1$d/%2$d · %3$d%%</string>
+    <string name="reader_chapter_load_failed_title">【章节加载失败】</string>
+
+    <!-- 主题 -->
+    <string name="theme_day">日间</string>
+    <string name="theme_night">夜间</string>
+    <string name="theme_eye_care">护眼</string>
+
+    <!-- 设置 -->
+    <string name="settings_title">设置</string>
+    <string name="settings_listen_section">听书</string>
+    <string name="settings_tts_engine">TTS 引擎</string>
+    <string name="settings_engine_local_selected">内置离线引擎（点击切换）</string>
+    <string name="settings_no_engine">未发现引擎，请安装 eSpeak NG / RHVoice 或导入内置引擎语音模型</string>
+    <string name="settings_engine_selected">%1$s（点击切换）</string>
+    <string name="settings_engine_auto_with">自动（%1$s）</string>
+    <string name="settings_engine_uninstalled">指定引擎已卸载，将回退自动选择</string>
+    <string name="settings_local_model_section">离线语音模型</string>
+    <string name="settings_local_model_title">内置引擎语音模型（备选）</string>
+    <string name="settings_local_model_imported">已导入：%1$s · %2$s</string>
+    <string name="settings_local_model_hint">未导入。内置引擎为备选方案：合成较慢、句间可能有停顿，优先使用系统离线 TTS。如确需导入：下载 sherpa-onnx 中文模型（推荐 vits-melo-tts-zh_en）解压后点「导入」选择文件夹</string>
+    <string name="settings_model_importing">正在导入… 已拷贝 %1$s</string>
+    <string name="settings_storage_section">存储管理</string>
+    <string name="settings_db">书库数据库</string>
+    <string name="settings_epub_cache">EPUB 文本缓存</string>
+    <string name="settings_tts_cache">TTS 音频缓存</string>
+    <string name="settings_tts_cache_hint">句级缓存（V1.2 合成管线启用后产生）</string>
+    <string name="settings_backup_section">备份与恢复</string>
+    <string name="settings_backup_busy">正在处理备份文件…</string>
+    <string name="settings_backup_export">导出备份</string>
+    <string name="settings_backup_export_hint">书库索引、进度、书签、标签与设置 → 单个 JSON 文件（仅存本机）</string>
+    <string name="settings_backup_import">导入备份</string>
+    <string name="settings_backup_import_hint">从备份文件覆盖恢复：先清空当前全部数据再导入</string>
+    <string name="settings_diagnostics_section">诊断</string>
+    <string name="settings_crash_logs">崩溃日志</string>
+    <string name="settings_crash_none">无本地崩溃记录（仅存本机，不上传）</string>
+    <string name="settings_crash_count">%1$d 份（仅存本机，不上传）</string>
+    <string name="settings_about_section">关于</string>
+    <string name="settings_principles">产品原则</string>
+    <string name="settings_principles_text">完全无广告 · 全离线运行（不依赖任何 Google 服务与在线接口）\n本地优先 · 零数据收集 · 无账号\n不做在线书城与爬虫</string>
+    <string name="settings_data_note">数据说明</string>
+    <string name="settings_data_note_text">书库索引、进度、设置全部保存在本机。\n扫描通过系统文件选择器授权，App 不申请存储权限（Android 11+）。</string>
+    <string name="settings_engine_dialog_title">选择 TTS 引擎</string>
+    <string name="settings_engine_auto">自动（系统默认）</string>
+    <string name="settings_local_engine_option">内置离线引擎（备选 · 合成较慢）</string>
+    <string name="settings_local_engine_imported_hint">已导入：%1$s；性能有限，句间可能有停顿，优先用系统离线 TTS</string>
+    <string name="settings_local_engine_missing_hint">未导入语音模型，请先在「离线语音模型」导入</string>
+    <string name="settings_import_confirm_title">覆盖式恢复</string>
+    <string name="settings_import_confirm_text">将清空当前全部书籍、章节、进度、书签、标签与扫描目录，然后用备份文件恢复，阅读 / 听书设置也会被备份中的值覆盖。\n\n此操作不可撤销，确定继续？</string>
+    <string name="settings_import_confirm_button">清空并恢复</string>
+    <string name="settings_engine_switched">TTS 引擎已切换，下次开始听书生效</string>
+    <string name="settings_export_success">导出成功：%1$d 条记录 · %2$s</string>
+    <string name="settings_export_skipped">（本机无 %1$s 表，已跳过）</string>
+    <string name="settings_restore_stop_listen">请先停止听书再恢复备份</string>
+    <string name="settings_restore_success">恢复完成：%1$d 条记录</string>
+    <string name="settings_restore_settings">，设置已恢复</string>
+    <string name="settings_restore_settings_engine">，设置已恢复（TTS 引擎已切换）</string>
+    <string name="settings_cleanup_done">已清理 %1$s</string>
+    <string name="settings_model_imported">离线语音模型导入成功：%1$s（%2$s）</string>
+    <string name="settings_model_removed">已移除离线语音模型</string>
+    <string name="settings_model_import_failed">导入失败：%1$s</string>
+    <string name="settings_model_import_verify_failed">导入失败：拷贝后校验未通过，已保留原模型</string>
+    <string name="settings_model_import_dir_unreadable">无法读取所选目录，请重试</string>
+
+    <!-- 分享导入 -->
+    <string name="share_import_unreadable">无法读取分享内容</string>
+    <string name="share_import_success">导入成功：《%1$s》</string>
+    <string name="share_import_updated">已更新章节索引</string>
+    <string name="share_import_unchanged">文件无变化</string>
+    <string name="share_import_failed">导入失败: %1$s</string>
+
+    <!-- 听书服务 / 通知 -->
+    <string name="tts_notification_channel">听书播放</string>
+    <string name="tts_notification_text">%1$s · %2$d/%3$d句</string>
+    <string name="tts_action_play_pause">播放/暂停</string>
+    <string name="tts_action_next">下一句</string>
+    <string name="tts_action_prev">上一句</string>
+    <string name="tts_error_book_missing">书籍不存在或已被删除</string>
+    <string name="tts_error_no_chapters">该书没有章节索引</string>
+    <string name="tts_error_local_model">内置离线引擎不可用：语音模型未导入或无效。请到「设置 → 离线语音模型」导入后重试。</string>
+    <string name="tts_error_no_engine">未找到 TTS 语音引擎。请安装开源离线引擎（如 eSpeak NG / RHVoice），或在系统设置中启用 TTS。</string>
+    <string name="tts_error_empty_chapter">本章无可朗读内容</string>
+    <string name="tts_error_utterance">TTS 朗读出错，已跳过该句</string>
+
+    <!-- 输出设备 -->
+    <string name="audio_group_speaker">扬声器</string>
+    <string name="audio_group_wired">有线</string>
+    <string name="audio_group_bluetooth">蓝牙</string>
+    <string name="audio_group_usb">USB</string>
+    <string name="audio_group_other">其他</string>
+    <string name="audio_speaker">扬声器</string>
+    <string name="audio_speaker_safe">扬声器（安全音量）</string>
+    <string name="audio_earpiece">听筒</string>
+    <string name="audio_wired_headset">有线耳麦</string>
+    <string name="audio_wired_headphones">有线耳机</string>
+    <string name="audio_line_analog">模拟音频线</string>
+    <string name="audio_line_digital">数字音频线</string>
+    <string name="audio_aux_line">AUX 音频线</string>
+    <string name="audio_bt_sco">蓝牙通话</string>
+    <string name="audio_bt_a2dp">蓝牙音频</string>
+    <string name="audio_ble_headset">蓝牙 LE 耳机</string>
+    <string name="audio_ble_speaker">蓝牙 LE 音箱</string>
+    <string name="audio_ble_broadcast">蓝牙 LE 广播</string>
+    <string name="audio_hearing_aid">助听器</string>
+    <string name="audio_usb_device">USB 音频</string>
+    <string name="audio_usb_headset">USB 耳机</string>
+    <string name="audio_usb_accessory">USB 音频配件</string>
+    <string name="audio_hdmi">HDMI 音频</string>
+    <string name="audio_dock">底座音频</string>
+    <string name="audio_fm">FM 收音</string>
+    <string name="audio_fm_tuner">FM 调谐</string>
+    <string name="audio_tv_tuner">电视调谐</string>
+    <string name="audio_telephony">通话音频</string>
+    <string name="audio_ip">网络音频</string>
+    <string name="audio_bus">总线音频</string>
+    <string name="audio_builtin_mic">内置麦克风</string>
+    <string name="audio_unknown">其他音频设备</string>
+    <string name="audio_none_detected">未检测到输出设备</string>
+    <string name="audio_device_with_count">%1$s×%2$d</string>
+
+    <!-- 本地模型探测 -->
+    <string name="model_error_empty_dir">所选目录为空</string>
+    <string name="model_error_missing_model">目录中缺少模型文件 model.onnx（或量化版 model.int8.onnx）。找到的文件：%1$s</string>
+    <string name="model_error_missing_tokens">目录中缺少 tokens.txt（词表文件）。找到的文件：%1$s</string>
+    <string name="model_error_matcha_data">Matcha 模型缺少 lexicon.txt（中文）或 espeak-ng-data/（英文音素数据）</string>
+    <string name="model_error_missing_dict">中文 vits 模型缺少 dict/ 目录（jieba 分词词典，多音字必需）。请确认下载的是完整模型包（如 vits-melo-tts-zh_en）并连同 dict 目录一起导入</string>
+    <string name="model_error_unrecognized">无法识别的模型目录（缺少 lexicon.txt / vocoder.onnx / espeak-ng-data）。推荐导入 sherpa-onnx 的 vits-melo-tts-zh_en 中文模型。找到的文件：%1$s</string>
+    <string name="model_error_more_files"> 等 %1$d 个文件</string>
+    <string name="model_label_vits_zh_int8">VITS 中文模型（int8 量化 · 中英双语）</string>
+    <string name="model_label_vits_zh">VITS 中文模型（中英双语）</string>
+    <string name="model_label_matcha_zh">Matcha 中文模型</string>
+    <string name="model_label_matcha_en">Matcha 模型（英文）</string>
+    <string name="model_label_kokoro">Kokoro 多语言模型</string>
+
+    <!-- 备份 -->
+    <string name="backup_error_read_file">无法读取所选文件</string>
+    <string name="backup_error_not_json">备份文件不是有效的 JSON</string>
+    <string name="backup_error_table_not_array">备份表 %1$s 不是数组</string>
+    <string name="backup_error_row_not_object">备份行不是 JSON 对象</string>
+    <string name="backup_error_too_large">备份文件过大（超过 %1$dMB），当前版本不支持</string>
+    <string name="backup_error_missing_core">备份缺少核心表（%1$s），可能已损坏，已拒绝导入，本机数据未改动</string>
+    <string name="backup_error_table_order">备份表顺序不合法（book_tags 必须先有 books/tags），请使用本应用导出的备份文件</string>
+    <string name="backup_error_write_file">无法写入所选文件</string>
+    <string name="backup_error_export_too_large">书库数据过大（超过 %1$dMB），当前版本无法生成可恢复的备份</string>
+    <string name="backup_error_export_failed">导出失败：%1$s</string>
+    <string name="backup_error_schema_too_new">备份来自更高版本的 App（schema=%1$d），请升级后再导入</string>
+    <string name="backup_error_schema_missing">备份文件格式无效：缺少或无法识别的 schema 版本</string>
+    <string name="backup_error_no_data">备份文件不含可恢复的数据</string>
+    <string name="backup_error_import_failed">导入失败：%1$s</string>
+    <string name="backup_error_binary_column">表 %1$s 的列 %2$s 为二进制类型，当前版本不支持备份</string>
+    <string name="backup_warn_table_kept">备份不含 %1$s 数据，已保留本机现有 %1$s</string>
+    <string name="backup_warn_booktags_skipped">%1$d 条标签关联引用了不存在的书籍/标签，已跳过</string>
+    <string name="backup_warn_duplicate_rows">备份内有 %1$d 条重复主键，后者覆盖前者</string>
+    <string name="backup_warn_tables_skipped">本机无 %1$s 表，已跳过</string>
+    <string name="backup_warn_unknown_tables">已忽略 %1$d 个未知表</string>
+    <string name="backup_warn_unknown_columns">已跳过 %1$d 个未知列</string>
+    <string name="backup_warn_no_settings">备份中不含设置，已保留当前设置</string>
+    <string name="backup_warn_reader_settings_failed">阅读设置恢复失败：%1$s</string>
+    <string name="backup_warn_listen_settings_failed">听书设置恢复失败：%1$s</string>
+    <string name="backup_warn_dangling_chapters">有 %1$d 条章节数据引用了不存在的书籍</string>
+    <string name="backup_warn_dangling_progress">有 %1$d 条进度数据引用了不存在的书籍</string>
+    <string name="backup_warn_dangling_bookmarks">有 %1$d 条书签数据引用了不存在的书籍</string>
+    <string name="backup_warn_dangling_booktags">有 %1$d 条书籍标签关联引用了不存在的书籍或标签</string>
+    <string name="backup_warn_sources_unreadable">%1$d 本书的源文件当前不可访问，请重新授权扫描目录或重新导入</string>
+    <string name="backup_warn_folders_unreadable">%1$d 个扫描目录当前不可访问，请重新授权</string>
+    <string name="backup_summary_rows">共 %1$d 条记录</string>
+    <string name="backup_notification_unreadable">无法打开 %1$s</string>
+    <string name="backup_copy_failed">拷贝 %1$s 失败：%2$s</string>
+
+    <!-- 扫描 / 导入摘要 -->
+    <string name="scan_summary_added">新增 %1$d · 更新 %2$d · 无变化 %3$d · 失败 %4$d</string>
+
+    <!-- 章节加载占位 -->
+    <string name="chapter_load_failed_title">章节加载失败</string>
+    <string name="chapter_load_failed_reason">原因：%1$s</string>
+    <string name="chapter_load_failed_retry">请尝试：书籍详情 → 重新解析；或在书架重新添加扫描文件夹后扫描。</string>
+    <string name="chapter_fail_no_permission">无法访问源文件（文件授权已失效）</string>
+    <string name="chapter_fail_not_found">源文件不存在或已被移动</string>
+    <string name="chapter_fail_read">读取源文件失败</string>
+    <string name="chapter_fail_parse">章节解析失败</string>
+    <string name="importer_no_filename">无文件名</string>
+    <string name="importer_unsupported">%1$s: 不支持的格式</string>
+    <string name="importer_empty_file">%1$s: 空文件</string>
+    <string name="importer_no_text">%1$s: 无有效文本</string>
+    <string name="importer_untitled">未命名</string>
+    <string name="importer_unopenable">%1$s: 无法打开</string>
+    <string name="importer_epub_parse">%1$s: EPUB 解析失败（缺 OPF/spine）</string>
+    <string name="importer_no_chapters">%1$s: 无有效章节文本</string>
+    <string name="chapter_default_title">第 %1$d 章</string>
+    <string name="library_scan_walk_failed">文件夹「%1$s」遍历失败: %2$s</string>
+    <string name="txt_open_failed">无法打开文件: %1$s</string>
+    <string name="txt_too_large">文件超过 %1$dMB 上限</string>
+    <string name="epub_entry_too_large">zip 条目超过 %1$dMB</string>
+</resources>

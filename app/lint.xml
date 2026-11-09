@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Lint 门禁配置（V1.4）。
+  项目无 CI，本地/未来 CI 以 `./gradlew :app:check` 作为门禁（含 lint + 合规校验 + 单测）。
+  下面只忽略 **基线既有、逐条核对过、非本迭代引入** 的 3 条误报；
+  其他 lint 规则保持默认，禁止在这里做全局关闭。
+-->
+<lint>
+    <!--
+      1) AppLinkUrlError：app/src/main/AndroidManifest.xml 的「打开方式」VIEW intent-filter
+         （text/plain、application/epub+zip 的 mimeType，无 scheme/host）是文件打开用途，
+         不是 App Links/Deep Links；lint 按 deep-link 规范误报。行为正确，忽略该文件。
+    -->
+    <issue id="AppLinkUrlError">
+        <ignore path="src/main/AndroidManifest.xml" />
+    </issue>
+
+    <!--
+      2) ProduceStateDoesNotAssignValue：Compose lint 对以下两处 produceState 的生产者赋值
+         （value = withContext(Dispatchers.IO) { ... }）识别不足而误报；代码实际有赋值，
+         且封面加载在 V1.2/V1.3 的模拟器 E2E 中正常工作。仅忽略这两个文件。
+    -->
+    <issue id="ProduceStateDoesNotAssignValue">
+        <ignore path="src/main/java/com/yyx/reader/feature/bookdetail/DetailScreen.kt" />
+        <ignore path="src/main/java/com/yyx/reader/feature/library/LibraryScreen.kt" />
+    </issue>
+</lint>

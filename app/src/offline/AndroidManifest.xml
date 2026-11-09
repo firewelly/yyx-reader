@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  offline 变体合规加固：
+  media3 会合并声明 ACCESS_NETWORK_STATE（仅用于网络类型指标），
+  本应用全离线运行，无任何网络 API 调用，故显式移除。
+  offline 变体最终不持有任何网络相关权限。
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE"
+        tools:node="remove" />
+</manifest>
