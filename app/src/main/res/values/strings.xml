@@ -328,4 +328,10 @@
     <string name="txt_open_failed">Cannot open file: %1$s</string>
     <string name="txt_too_large">File exceeds the %1$d MB limit</string>
     <string name="epub_entry_too_large">ZIP entry exceeds %1$d MB</string>
+    <string name="library_all_files_label">All-files access (advanced)</string>
+    <string name="library_all_files_on">On: scanning walks Download / Documents and all common folders automatically</string>
+    <string name="library_all_files_off">Off: folders must be granted individually (safe default)</string>
+    <string name="library_all_files_open_settings">Enable</string>
+    <string name="library_all_files_hint">Optional, for sideload users: automatic scanning of all common folders without per-folder approvals. Not recommended for Play-distributed builds.</string>
+    <string name="library_saf_limit_hint">System restriction: Download / Documents root folders cannot be granted via SAF — use sub-folders, or enable all-files access above.</string>
 </resources>

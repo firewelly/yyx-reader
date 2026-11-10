@@ -1,5 +1,23 @@
 package com.yyx.reader.feature.library
 
+import androidx.compose.runtime.SideEffect
+import androidx.activity.compose.ManagedActivityResultLauncher
+import android.content.Context
+import android.provider.DocumentsContract
+import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.FolderOpen
+import androidx.compose.runtime.DisposableEffect
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.Lifecycle
+import androidx.documentfile.provider.DocumentFile
+import android.provider.Settings
+import android.os.Environment
+import android.os.Build
+import android.net.Uri
+import android.content.Intent
 import android.graphics.BitmapFactory
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -103,7 +121,7 @@ fun LibraryScreen(
     var showDeleteDialog by remember { mutableStateOf(false) }
     var showTagSheet by remember { mutableStateOf(false) }
     var tagToDelete by remember { mutableStateOf<Tag?>(null) }
-
+    val context = LocalContext.current
     val folderPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocumentTree()) { uri ->
         uri?.let(viewModel::addFolder)
     }
@@ -188,8 +206,10 @@ fun LibraryScreen(
     if (showScanSheet) {
         ScanSheet(
             ui = ui,
+            allFilesGranted = rememberAllFilesGranted(),
             onDismiss = { showScanSheet = false },
             onAddFolder = { folderPicker.launch(null) },
+            onOpenAllFilesSettings = { openAllFilesSettings(context) },
             onRemoveFolder = viewModel::removeFolder,
             onStartScan = viewModel::startScan,
             onCancelScan = viewModel::cancelScan,
@@ -665,8 +685,10 @@ private fun EmptyState(modifier: Modifier, onAddFolder: () -> Unit, onScan: () -
 @Composable
 private fun ScanSheet(
     ui: LibraryViewModel.UiState,
+    allFilesGranted: Boolean,
     onDismiss: () -> Unit,
     onAddFolder: () -> Unit,
+    onOpenAllFilesSettings: () -> Unit,
     onRemoveFolder: (ScanFolder) -> Unit,
     onStartScan: () -> Unit,
     onCancelScan: () -> Unit,
@@ -711,6 +733,48 @@ private fun ScanSheet(
                 Text(stringResource(R.string.library_add_folder))
             }
 
+            // V1.5.x 扫描方案 C②：可选「所有文件访问」（API 30+；开启后自动遍历常见目录）
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                HorizontalDivider(modifier = Modifier.padding(vertical = 10.dp))
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            stringResource(R.string.library_all_files_label),
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.Medium,
+                        )
+                        Text(
+                            if (allFilesGranted) stringResource(R.string.library_all_files_on)
+                            else stringResource(R.string.library_all_files_off),
+                            fontSize = 11.sp,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                    if (!allFilesGranted) {
+                        TextButton(onClick = onOpenAllFilesSettings) {
+                            Text(stringResource(R.string.library_all_files_open_settings), fontSize = 13.sp)
+                        }
+                    } else {
+                        Icon(
+                            Icons.Filled.CheckCircle,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.size(20.dp),
+                        )
+                    }
+                }
+                Text(
+                    stringResource(R.string.library_all_files_hint),
+                    fontSize = 10.sp,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
+                )
+                Text(
+                    stringResource(R.string.library_saf_limit_hint),
+                    fontSize = 10.sp,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
+                )
+            }
+
             Spacer(Modifier.height(16.dp))
             if (ui.scanning) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -732,7 +796,12 @@ private fun ScanSheet(
                         .padding(top = 8.dp, bottom = 8.dp),
                 )
             } else {
-                Button(onClick = onStartScan, enabled = ui.folders.isNotEmpty(), modifier = Modifier.fillMaxWidth()) {
+                // V1.5.x 混合扫描：已开启「所有文件访问」时无需任何 SAF 文件夹即可扫描
+                Button(
+                    onClick = onStartScan,
+                    enabled = ui.folders.isNotEmpty() || allFilesGranted,
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
                     Text(stringResource(R.string.library_start_scan))
                 }
             }
@@ -760,3 +829,36 @@ private fun sortLabelRes(sort: Sort): Int = when (sort) {
 @Composable
 private fun scanSummaryText(report: com.yyx.reader.core.domain.model.ScanReport): String =
     stringResource(R.string.scan_summary_added, report.added, report.updated, report.skipped, report.failed)
+
+/** 「所有文件访问」授权状态（组合内可感知生命周期恢复刷新） */
+@Composable
+private fun rememberAllFilesGranted(): Boolean {
+    var granted by remember {
+        mutableStateOf(
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && Environment.isExternalStorageManager(),
+        )
+    }
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                granted = Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && Environment.isExternalStorageManager()
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
+    return granted
+}
+
+/** 跳转系统「所有文件访问」设置页（本应用入口；旧页面兜底） */
+private fun openAllFilesSettings(context: Context) {
+    val app = "package:${context.packageName}"
+    val intents = listOf(
+        Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION, Uri.parse(app)),
+        Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION),
+    )
+    intents.firstOrNull { it.resolveActivity(context.packageManager) != null }?.let {
+        context.startActivity(it)
+    }
+}

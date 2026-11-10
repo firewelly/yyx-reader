@@ -328,4 +328,10 @@
     <string name="txt_open_failed">无法打开文件: %1$s</string>
     <string name="txt_too_large">文件超过 %1$dMB 上限</string>
     <string name="epub_entry_too_large">zip 条目超过 %1$dMB</string>
+    <string name="library_all_files_label">所有文件访问（高级）</string>
+    <string name="library_all_files_on">已开启：扫描自动遍历 Download / Documents 等全部常用目录</string>
+    <string name="library_all_files_off">未开启：目录需逐个授权（默认，最安全）</string>
+    <string name="library_all_files_open_settings">去开启</string>
+    <string name="library_all_files_hint">可选，推荐侧载/F-Droid 用户开启：免逐个授权、自动扫描全部常用目录；Google Play 分发版建议仅授权子目录。</string>
+    <string name="library_saf_limit_hint">系统限制：Download / Documents 根目录无法经 SAF 授权——请授权其子目录，或开启上方「所有文件访问」。</string>
 </resources>

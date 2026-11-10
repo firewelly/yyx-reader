@@ -206,6 +206,9 @@ class LibraryViewModel @Inject constructor(
         }
     }
 
+    /** 界面层直接投递提示（快捷授权完成等本地事件复用 snackbar 通道） */
+    fun showMessage(text: String) = _ui.update { it.copy(message = text) }
+
     fun consumeMessage() = _ui.update { it.copy(message = null) }
 
     private fun derive(
